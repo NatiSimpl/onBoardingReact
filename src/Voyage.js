@@ -39,7 +39,7 @@ const Voyage = props => {
     
 
     return(
-        <div>
+        <div className="interiorComponent">
             <div className="titre">
                 <h1>Quels sont les prochains pays que vous pensez visiter ?</h1>
             </div>

@@ -13,7 +13,7 @@ code {
 }
 
 .photo {
-  width: 100px;
+  width: 80px;
   height: auto;
   padding: 15px;
 }
@@ -38,7 +38,7 @@ h4 {
 
 .card {
     display: flex;
-    width: 50%;
+    width: 100%;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
@@ -50,10 +50,33 @@ h4 {
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
+  width: 35%;
 }
 
 label {
   font-size: larger;
   padding: 10px 5px;
+}
+
+.container {
+  width: 40%;
+  border: 3px solid darkorange;
+  border-radius: 2px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.titre {
+  text-align: center;
+}
+
+.bouton {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.interiorComponent {
+  padding: 15px;
 }

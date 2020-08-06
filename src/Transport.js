@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import bus from './bus.png';
-import moto from './moto.svg';
-import train from './train.svg';
-import trott from './trott.png';
-import velo from './velo.svg';
-import voiture from './voiture.svg';
-import walk from './walk.svg';
+import bus from './images/bus.png';
+import moto from './images/moto.svg';
+import trott from './images/trott.png';
+import velo from './images/velo.svg';
+import voiture from './images/voiture.svg';
+import walk from './images/walk.svg';
 import './index.css';
 
 const transportMode = [
@@ -14,8 +13,7 @@ const transportMode = [
     {value: 'velo', label: 'Vélo', image: velo},
     {value: 'trottinette', label: 'Trottinette', image: trott},
     {value: 'bus', label: 'Autobus', image: bus},
-    {value: 'pied', label: 'A pied', image: walk},
-    {value: 'train', label: 'Train', image: train}
+    {value: 'pied', label: 'A pied', image: walk}
 ]
 
 
@@ -35,9 +33,9 @@ const Transport = props => {
     
 
     return(
-        <div>
+        <div className="interiorComponent">
             <div className="titre">
-                <h1>Choisissez votre mode de transport préféré</h1>
+                <h1>Votre moyen de locomotion préféré ?</h1>
             </div>
 
             <div className="card">

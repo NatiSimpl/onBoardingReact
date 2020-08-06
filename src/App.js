@@ -1,15 +1,18 @@
 import React from "react";
-import "./App.css";
+import "./index.css";
 import Voyage from "./Voyage";
 import Transport from './Transport';
 import Ville from "./Ville";
 
 function App() {
   return (
-    <div className="App">
-      <Ville />
-      <Transport />
+    <div className="container">
+      {/* <Ville /> */}
+      {/* <Transport /> */}
       <Voyage />
+      <div className="bouton">
+        <button>Next</button>
+      </div>
     </div>
   );
 }

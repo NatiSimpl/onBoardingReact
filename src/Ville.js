@@ -28,7 +28,7 @@ const Ville = props => {
     
 
     return(
-        <div>
+        <div className="interiorComponent">
             <div className="titre">
                 <h1>D'où venez-vous ?</h1>
             </div>
