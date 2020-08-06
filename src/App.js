@@ -7,6 +7,7 @@ import "./index.css";
 import Voyage from "./Voyage";
 import Transport from "./Transport";
 import Ville from "./Ville";
+import Modal from "./Modal";
 
 function App() {
   const [currentStep, setCurrentStep] = useState("page1");
