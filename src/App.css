@@ -1,3 +1,8 @@
 .App {
   text-align: center;
 }
+
+.selected {
+  border: fuchsia 2px solid;
+  width: 40px;
+}
