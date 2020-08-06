@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.photo {
+  width: 100px;
+  height: auto;
+  padding: 15px;
+}
+
+.elem {
+  background-color: gainsboro;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.elem:focus{
+  background-color: palegreen;
+}
+
+h4 {
+  align-self:center;
+}
+
+.card {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-flow: wrap;
+}
