@@ -3,6 +3,10 @@ import "./App.css";
 import Stepper from "./Stepper";
 import PersonalDetails from "./PersonalDetails";
 import styled from "styled-components";
+import "./index.css";
+import Voyage from "./Voyage";
+import Transport from "./Transport";
+import Ville from "./Ville";
 
 function App() {
   const [currentStep, setCurrentStep] = useState("page1");
@@ -33,6 +37,9 @@ function App() {
   return (
     <div className="App">
       <h1>hello</h1>
+      {/* <Ville /> */}
+      {/* <Transport /> */}
+      <Voyage />
       <PersonalDetails onNext={onClickNext} />
       <Stepper currentStep={currentStep} />
     </div>
