@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import bus from './bus.png';
 import moto from './moto.svg';
 import train from './train.svg';
@@ -22,6 +22,17 @@ const transportMode = [
 const Transport = props => {
 
     const [ transport, setTransport ] = useState(transportMode);
+    const [ transportChoose, setTransportChoose] = useState('');
+
+    function handleChooseTransport(choosen) {
+        setTransportChoose(choosen);
+    }
+    
+
+    useEffect(() => {
+        console.log(transportChoose);
+    }, [transportChoose])
+    
 
     return(
         <div>
@@ -33,9 +44,11 @@ const Transport = props => {
 
                 {transport.map(transport=> 
 
-                <button className="elem">
+                <button className="elem" onClick={() => handleChooseTransport(transport.value)} key={transport.value} value={transport.value}>
+
                     <img key={transport.value} src={transport.image} alt={transport.label} className="photo"/>
                     <h4>{transport.label}</h4>
+                
                 </button>
 
                 )}
