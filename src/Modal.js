@@ -1,73 +1,32 @@
-import React from 'react';
-import ReactDom from 'react-dom';
-import styled from 'styled-components';
+import React from "react";
+import ReactDom from "react-dom";
+import styled from "styled-components";
 
 const Modal = ({ onCloseModal, info }) => {
-//   const renderCountries = info.selectedCountries.map((country) => {
-//     if (country.selected === true) {
-//       return <span key={country.id}> {country.name} </span>;
-//     }
-//   });
+  const renderCountries = info.countries.map((country, index) => {
+    return <span key={index}> {country} </span>;
+  });
 
-//   const renderTransportation = info.selectedTransportation.map((transportation) => {
-//     if (transportation.selected === true) {
-//       return <span key={transportation.id}> {transportation.name} </span>;
-//     }
-//   }
-//   );
-
+  console.log(info);
   return ReactDom.createPortal(
     <Container>
       <Dialog>
         <h1>Félicitation, vous avez terminé ! </h1>
-        <h2></h2>
-        <p>
-          <b>Ville :</b> 
-          {/* {info.selectedCity.name} */}
-        </p>
-        <p>
-          <b>Votre moyen de transport préféré :</b> 
-          {/* {renderTransportation} */}
-        </p>
-        <p>
-          <b>Votre prochaine destination de vacances :</b> 
-          {/* {renderCountries} */}
-        </p>
-        <p>
-          <b>Vos détails personnels</b>
-        </p>
-        <p>
-          <b>Prénom :</b> 
-          {/* {info.personalDetails.firstName} */}
-        </p>
-        <p>
-          <b>Nom : </b>
-          {/* {info.personalDetails.familyName} */}
-        </p>
-        <p>
-          <b>Email :</b> 
-          {/* {info.personalDetails.email} */}
-        </p>
-        <p>
-          <b>Adresse : </b>
-          {/* {info.personalDetails.address} */}
-        </p>
-        <p>
-          <b>Pays :</b> 
-          {/* {info.personalDetails.country} */}
-        </p>
-        <p>
-          <b>Genre :</b> 
-          {/* {info.personalDetails.genre} */}
-        </p>
+        <b>Ville :</b>
+        {info.city}
+        <b>Votre moyen de transport préféré :</b>
+        {info.transport}
+        <b>Votre prochaine destination de vacances :</b>
+        {renderCountries}
+        <b>Vos détails personnels</b>
+        {info.personalData.name} {info.personalData.lastName}
+        {info.personalData.gender}
         <div>
-          <button className="ui green button" onClick={onCloseModal}>
-            Fermer
-          </button>
+          <button onClick={onCloseModal}>Fermer</button>
         </div>
       </Dialog>
     </Container>,
-    document.getElementById('modal')
+    document.getElementById("modal")
   );
 };
 

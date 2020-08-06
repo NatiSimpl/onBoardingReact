@@ -118,6 +118,7 @@ function PersonalDetails({ onNext }) {
             address: currentAddress,
             email: currentEmail,
             country: currentCountry,
+            gender: currentGender,
           })
         }
       >
